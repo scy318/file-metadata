@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>File Metadata Microservice</title>
+</head>
+<body>
+  <h1>File Metadata Uploader</h1>
+  <!-- 关键：enctype 必须为 multipart/form-data，否则无法上传文件 -->
+  <form action="/upload" method="POST" enctype="multipart/form-data">
+    <!-- 关键：file 输入的 name 必须为 "upfile"（匹配 multer 的配置） -->
+    <input type="file" name="upfile" />
+    <button type="submit">Upload</button>
+  </form>
+</body>
+</html>
